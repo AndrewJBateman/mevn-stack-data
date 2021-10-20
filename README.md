@@ -1,6 +1,6 @@
 # :zap: MEVN Stack Data
 
-* MEVN app: Vue frontend used to Create Read Update & Delete (CRUD) data with a Node-Express backend & MongoDB database. using.
+* MEVN app: Vue frontend used to Create Read Update & Delete (CRUD) cable pulling data with a Node-Express backend & MongoDB database.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/mevn-stack-data?style=plastic)
@@ -28,6 +28,7 @@
 
 ## :books: General info
 
+* Cable pulling database idea inspired by time spent pulling electrical cables on an LNG plant in Northern Norway for Statoil. It is required to complete a cable database with details of cable, cable drum, amount of cable pulled and installed etc.
 * Axios used to send/receive data from the MongoDB backend
 * Backend node.js code separated into routes/controller files with a Mongoose model Note schema.
 * Latest Mongoose v6 connection config. used (as of oct. 2021) with no deprecation warnings. Note an old config. will stop any Mongoose-based app from working.
@@ -62,9 +63,11 @@
 * [cors v2](https://www.npmjs.com/package/cors) Cross Origin Resource Sharing Connect/Express middleware
 * [Node v14](https://nodejs.org/en/) JavaScript runtime built on Chrome's V8 JavaScript engine.
 * [Typescript v4](https://www.typescriptlang.org/)
+* [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
 
 ### Full-Stack
 
+* [Thunder Client VS Code Extension](https://www.thunderclient.io/) lightweight Rest Client for Testing APIs
 * [Heroku v7](https://www.heroku.com)
 
 ## :floppy_disk: Setup
@@ -78,7 +81,7 @@
 
 **/api Backend:**
 
-* From `/server` type `ts-node-dev index.ts` to run node.js server.
+* From `/server` type `npm run dev` to run node.js server.
 * Navigate to `http://localhost:4000/` to see JSON object with todos or an empty array (refresh after changes - does not auto-update).
 * CRUD operations can be performed on this backend using the [Postman](https://www.postman.com/) API dev tool.
 
