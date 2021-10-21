@@ -11,6 +11,11 @@ const cableSchema = new Schema({
 		required: true,
 		trim: true,
 	},
+  notes: {
+    type: String,
+    required: false,
+    trim: true
+  },
 	laid: {
 		type: Boolean,
 		default: false,
@@ -18,7 +23,7 @@ const cableSchema = new Schema({
 },
 {
   versionKey: false,
-  
+
 });
 
 export default model("Cable", cableSchema);
