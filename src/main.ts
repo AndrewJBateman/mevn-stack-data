@@ -1,5 +1,10 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import './registerServiceWorker'
+import { createApp } from "vue";
+import App from "./App.vue";
+import "./registerServiceWorker";
+import router from "./router";
 
-createApp(App).mount('#app')
+import "bootswatch/dist/flatly/bootstrap.min.css"
+
+createApp(App)
+	.use(router)
+	.mount("#app");
