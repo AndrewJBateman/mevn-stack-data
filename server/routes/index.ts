@@ -6,11 +6,13 @@ const router = Router();
 // GET all cables
 router.get("/cables", async (req, res) => {
 	const cables = await Cable.find();
-	res.send(cables);
+  console.log("cables: ", cables);
+	res.json(cables);
 });
 
 // POST a cable to cables database
 router.post("/cables", async (req, res) => {
+  console.log("req.body: ", req.body);
 	const { drum, ref, notes } = req.body;
 	const cable = new Cable({ drum, ref, notes });
 
