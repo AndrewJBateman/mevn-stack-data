@@ -1,6 +1,6 @@
 # :zap: MEVN Stack Data
 
-* MEVN app: Vue frontend used to Create Read Update & Delete (CRUD) cable pulling data with a Node-Express backend & MongoDB database.
+* MEVN app: Vue frontend used to Create Read Update & Delete (CRUD) cable installation data with a Node-Express backend & MongoDB database.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/mevn-stack-data?style=plastic)
@@ -17,8 +17,11 @@
   * [:signal_strength: Technologies](#signal_strength-technologies)
     * [Frontend](#frontend)
     * [Backend](#backend)
-    * [Full-Stack](#full-stack)
+    * [General](#general)
   * [:floppy_disk: Setup](#floppy_disk-setup)
+    * [Frontend](#frontend)
+    * [Backend](#backend)
+    * Full-Stack](#full-stack)
   * [:computer: Code Examples](#computer-code-examples)
   * [:cool: Features](#cool-features)
   * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
@@ -33,7 +36,6 @@
 * Backend node.js code separated into routes file with a Mongoose model Cable schema.
 * Latest Mongoose v6 connection config. used (as of oct. 2021) with no deprecation warnings. Note an old config. will stop any Mongoose-based app from working.
 * [Vue 4 RouteRecordRaw](https://next.router.vuejs.org/api/#routerecordraw) route record provided by user
-* The app is deployed on the Heroku 18 stack, based on Ubuntu 18.04
 
 ## :camera: Screenshots
 
@@ -51,10 +53,8 @@
 * [Vue Router v4](https://router.vuejs.org/) the latest official router for Vue.js
 * [Vue CLI v4](https://cli.vuejs.org/)
 * [Axios v0.23.0](https://github.com/axios/axios), a promise-based http client, used to consume API data.
-* [vue-axios v4](https://www.npmjs.com/package/vue-axios) for integrating axios to Vuejs
 * [Bootswatch v4](https://bootswatch.com/) Bootstrap theme
 * [Vue moment v4](https://github.com/brockpetrie/vue-moment#readme) to convert UTC date format
-* [Material svg icons](https://material.io/resources/icons/?search=cale&icon=event_note&style=baseline)
 
 ### Backend
 * [Express v4](https://expressjs.com/)
@@ -76,13 +76,13 @@
 * `npm run client` to run client dev server.
 * Navigate to `http://localhost:8080/`. The app will automatically reload if you change any of the source files.
 
-**/api Backend:**
+**Backend:**
 
-* Run `npm run dev` to run node.js server.
+* Run `npm run server` to run node.js server.
 * Navigate to `http://localhost:3000/api/cables` to see JSON object with cable list or an empty array if no cables (refresh after changes - does not auto-update).
 * CRUD operations can be performed on this backend using the [Postman](https://www.postman.com/) API dev tool or the [Thunder Client VS Code Extension](https://www.thunderclient.io/).
 
-**/ Full stack:**
+**Full stack:**
 
 * `npm run build` to create build file for both front & back ends
 * Navigate to `http://localhost:8080/` to see frontend and `http://localhost:3000/` to see backend (refresh after changes - does not auto-update).
@@ -104,8 +104,8 @@
 ## :clipboard: Status & To-Do List
 
 * Status: Working full-stack CRUD app with MongoDB Atlas database
-* To-Do: PWA, fix navbar burger button, styling, add cable fields, add drop down menu for cable drum selection etc.
 * To-Do: separate controller functions from routes, add date field
+* To-Do: fix navbar burger button, styling, add cable fields, add drop down menu for cable drum selection etc.
 
 ## :clap: Inspiration
 
