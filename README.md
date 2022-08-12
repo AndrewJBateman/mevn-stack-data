@@ -19,9 +19,6 @@
     * [Backend](#backend)
     * [General](#general)
   * [:floppy_disk: Setup](#floppy_disk-setup)
-    * [Frontend](#frontend)
-    * [Backend](#backend)
-    * Full-Stack](#full-stack)
   * [:computer: Code Examples](#computer-code-examples)
   * [:cool: Features](#cool-features)
   * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
@@ -39,7 +36,7 @@
 
 ## :camera: Screenshots
 
-![Example screenshot](./img/edata.png)
+![Example screenshot](./img/data.png)
 ![Example screenshot](./img/create.png)
 ![Example screenshot](./img/edit.png)
 ![Example screenshot](./img/mongodb.png)
@@ -49,40 +46,47 @@
 ## :signal_strength: Technologies
 
 ### Frontend
+
 * [Vue v3](https://vuejs.org/) JS framework
 * [Vue Router v4](https://router.vuejs.org/) the latest official router for Vue.js
 * [Vue CLI v4](https://cli.vuejs.org/)
-* [Axios v0.23.0](https://github.com/axios/axios), a promise-based http client, used to consume API data.
+* [Axios v0.26.1](https://github.com/axios/axios), a promise-based http client, used to consume API data.
 * [Bootswatch v4](https://bootswatch.com/) Bootstrap theme
 * [Vue moment v4](https://github.com/brockpetrie/vue-moment#readme) to convert UTC date format
 
 ### Backend
+
 * [Express v4](https://expressjs.com/)
 * [Mongoose v6](https://mongoosejs.com/)
 * [cors v2](https://www.npmjs.com/package/cors) Cross Origin Resource Sharing Connect/Express middleware
-* [Node v14](https://nodejs.org/en/) JavaScript runtime built on Chrome's V8 JavaScript engine.
+* [Node v16](https://nodejs.org/en/) JavaScript runtime built on Chrome's V8 JavaScript engine.
 * [Typescript v4](https://www.typescriptlang.org/)
 * [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
 
 ### General
+
 * [Thunder Client VS Code Extension](https://www.thunderclient.io/) lightweight Rest Client for Testing APIs
 * [rimraf](https://www.npmjs.com/package/rimraf) the UNIX command rm -rf for node.
 
 ## :floppy_disk: Setup
 
-**Frontend:**
+**Dev Backend:**
 
-* `npm run lint` to lint files
-* `npm run client` to run client dev server.
-* Navigate to `http://localhost:8080/`. The app will automatically reload if you change any of the source files.
-
-**Backend:**
-
-* Run `npm run server` to run node.js server.
+* `cd server` to change directory
+* `npm i` to install dependencies
+* add MongoDB access
+* Run `npm run dev` to run node.js server.
 * Navigate to `http://localhost:3000/api/cables` to see JSON object with cable list or an empty array if no cables (refresh after changes - does not auto-update).
 * CRUD operations can be performed on this backend using the [Postman](https://www.postman.com/) API dev tool or the [Thunder Client VS Code Extension](https://www.thunderclient.io/).
 
-**Full stack:**
+**Dev Frontend:**
+
+* `npm i` to install dependencies
+* `npm run lint` to lint files
+* `npm run client` to run client dev server
+* Navigate to `http://localhost:8080/`. The app will automatically reload if you change any of the source files.
+
+**Build Full Stack:**
 
 * `npm run build` to create build file for both front & back ends
 * Navigate to `http://localhost:8080/` to see frontend and `http://localhost:3000/` to see backend (refresh after changes - does not auto-update).
@@ -90,11 +94,31 @@
 
 ## :computer: Code Examples
 
-* tba
+* 'cable.controller.ts' function to update cable by id
 
-```javascript
-
-
+```typescript
+export const updateCableHandler = async (
+  req: Request,
+  res: Response
+): Promise<Response<any, Record<string, any>>> => {
+  try {
+    const updatedCable = await Cable.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedCable) {
+      return res.status(404).json({
+        message: "Cable to be updated was not found",
+      });
+    }
+    return res.json(updatedCable);
+  } catch (error) {
+    return res.status(500).send(error);
+  }
+};
 ```
 
 ## :cool: Features
@@ -104,7 +128,7 @@
 ## :clipboard: Status & To-Do List
 
 * Status: Working full-stack CRUD app with MongoDB Atlas database
-* To-Do: separate controller functions from routes, add date field
+* To-Do: Replace any data types, separate controller functions from routes, add date field
 * To-Do: fix navbar burger button, styling, add cable fields, add drop down menu for cable drum selection etc.
 
 ## :clap: Inspiration
