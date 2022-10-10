@@ -50,9 +50,8 @@
 * [Vue v3](https://vuejs.org/) JS framework
 * [Vue Router v4](https://router.vuejs.org/) the latest official router for Vue.js
 * [Vue CLI v4](https://cli.vuejs.org/)
-* [Axios v0.26.1](https://github.com/axios/axios), a promise-based http client, used to consume API data.
-* [Bootswatch v4](https://bootswatch.com/) Bootstrap theme
-* [Vue moment v4](https://github.com/brockpetrie/vue-moment#readme) to convert UTC date format
+* [Axios v1](https://github.com/axios/axios), a promise-based http client, used to consume API data.
+* [Bootswatch v5](https://bootswatch.com/) Bootstrap theme
 
 ### Backend
 
