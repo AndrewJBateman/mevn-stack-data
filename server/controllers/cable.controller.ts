@@ -1,4 +1,3 @@
-import { AxiosPromise } from "axios";
 import { Request, Response } from "express";
 
 import Cable from "../models/Cable";
@@ -29,7 +28,7 @@ export const displayAllCablesHandler = async (
 export const createCableHandler = async (
   req: Request,
   res: Response
-): Promise<AxiosPromise<never>> => {
+): Promise<any> => {
   try {
     const { drum, ref, notes } = req.body;
     const cable = new Cable({ drum, ref, notes });
@@ -44,7 +43,7 @@ export const createCableHandler = async (
 export const findCableHandler = async (
   req: Request,
   res: Response
-): Promise<Response<any, Record<string, any>>> => {
+): Promise<Response<never, Record<string, any>>> => {
   try {
     const cable = await Cable.findById(req.params.id);
     if (!cable)

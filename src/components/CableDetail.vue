@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@vue/runtime-core";
+import { defineComponent } from "vue";
 
 import { deleteCable, getCable, updateCable } from "@/services/CableService";
 import { Cable } from "@/interfaces/Cable";
