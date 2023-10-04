@@ -11,19 +11,19 @@
 ## :page_facing_up: Table of contents
 
 * [:zap: MEVN Stack Data](#zap-mevn-stack-data)
-  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:page\_facing\_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
   * [:camera: Screenshots](#camera-screenshots)
-  * [:signal_strength: Technologies](#signal_strength-technologies)
+  * [:signal\_strength: Technologies](#signal_strength-technologies)
     * [Frontend](#frontend)
     * [Backend](#backend)
     * [General](#general)
-  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:floppy\_disk: Setup](#floppy_disk-setup)
   * [:computer: Code Examples](#computer-code-examples)
   * [:cool: Features](#cool-features)
-  * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
+  * [:clipboard: Status \& To-Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
-  * [:file_folder: License](#file_folder-license)
+  * [:file\_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -49,7 +49,7 @@
 
 * [Vue v3](https://vuejs.org/) JS framework
 * [Vue Router v4](https://router.vuejs.org/) the latest official router for Vue.js
-* [Vue CLI v4](https://cli.vuejs.org/)
+* [Vue CLI v5](https://cli.vuejs.org/)
 * [Axios v1](https://github.com/axios/axios), a promise-based http client, used to consume API data.
 * [Bootswatch v5](https://bootswatch.com/) Bootstrap theme
 
@@ -140,4 +140,4 @@ export const updateCableHandler = async (
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: `gomezbateman@yahoo.com`
