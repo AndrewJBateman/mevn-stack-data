@@ -36,12 +36,7 @@
 
 ## :camera: Screenshots
 
-![Example screenshot](./img/data.png)
-![Example screenshot](./img/create.png)
-![Example screenshot](./img/edit.png)
-![Example screenshot](./img/mongodb.png)
-![Example screenshot](./img/backend.png)
-![Example screenshot](./img/info.png)
+![Example screenshot](./imgs/vue.png)
 
 ## :signal_strength: Technologies
 
@@ -122,7 +117,7 @@ export const updateCableHandler = async (
 
 ## :cool: Features
 
-* tba
+* Data successfully stored on MongoDB Atlas database
 
 ## :clipboard: Status & To-Do List
 
