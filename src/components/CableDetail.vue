@@ -1,13 +1,13 @@
 <template>
 	<div class="col-md-4 offset-md-4">
-		<form @submit.prevent="handleUpdate()" class="card card-body">
+		<form @submit.prevent="handleUpdate()" class="card card-body m-4">
 			<h1 class="text-center h3 mb-3">Cable Detail</h1>
 			<input
 				type="text"
 				v-model="currentCable.drum"
 				class="form-control mb-3"
 			/>
-			<input type="text" v-model="currentCable.ref" class="form-control mb-3" />
+			<input type="text" v-model="currentCable.ref" class="form-control mb-3" aria-label="cable type" />
 			<textarea
 				rows="4"
 				v-model="currentCable.notes"
